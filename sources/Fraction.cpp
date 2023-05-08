@@ -153,9 +153,6 @@ Fraction ariel::operator*(const float & f, const Fraction & r)
 Fraction ariel::Fraction::operator/(const Fraction & r) const
 {
     // Handling overflow
-    std::cout << (double)(((float)this->numerator / (float)this->denominator) - ((float)r.numerator / (float)r.denominator)) << std::endl;
-    std::cout << (double)(float)std::numeric_limits<int>::max() << std::endl;
-    std::cout << (double)(float)std::numeric_limits<int>::min() << std::endl;
     if (((float)this->numerator * (float)r.denominator) > (float)std::numeric_limits<int>::max() ||
         ((float)this->numerator * (float)r.denominator) < (float)std::numeric_limits<int>::min() ||
         ((float)this->denominator * (float)r.numerator) > (float)std::numeric_limits<int>::max() ||
